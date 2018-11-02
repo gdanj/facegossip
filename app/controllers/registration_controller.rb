@@ -1,9 +1,11 @@
 class RegistrationController < ApplicationController
   def new
+    @user = User.new
   end
 
-  def login
-
+  def create
+    user = User.create name:params[:name], email:params[:email], password:params[:password]
+    redirect_to "/registration/login"
   end
 
 

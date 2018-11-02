@@ -1,9 +1,9 @@
-<h1>Liste des livres</h1>
+<h1>Liste des gossip</h1>
 
-<% @gossi.each do |gossip| %>
+<% @gossi.each do |gossi| %>
 
-  <h2><%= gossip.title %></h2>
-  <h2><%= gossip.content %></h2>
-  <h2><%= gossip.user.name %></h2>
-  <a href="<%= gossip_path(gossip.id) %>" class="btn btn-primary">lire la suite</a>
+  <h2><%= gossi.title %></h2>
+  <h2><%= gossi.content %></h2>
+  <h2><%= gossi.user.name %></h2>
+  <a href="<%= gossip_path(gossi.id) %>" class="btn btn-primary">lire la suite</a>
 <% end %>

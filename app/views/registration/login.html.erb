@@ -1,12 +1,10 @@
 <h1>Connexion</h1>
 
-<a href="/gossips">Retourner à l'accueil</a>
-
 <%= form_tag "/registration/login", method: :post do %>
 
-  <input type="text" name="email" />
+  <input type="text" name="email" placeholder= 'Example@ex.com' />
 
-  <input type="password" name="password" />
+  <input type="password" name="password" placeholder= 'password'/>
 
   <input type="submit" value="Se connecter" />
 

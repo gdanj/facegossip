@@ -4,3 +4,12 @@
   <a href="/" class="btn btn-primary">menu principale</a>
   <a href="<%= gossip_path(@gossip.id)%>/edit" class="btn btn-primary">Modifier</a>
   <a href="<%= gossip_path(@gossip.id)%>" class="btn btn-danger" data-confirm="Vous être sur le point de supprimer le gossip." data-method="delete">Supprimer</a>
+    <section class="section comments">
+  	<div class="container">
+  		<h2 class="subtitle is-5"><strong><%= @gossip.comments.count %></strong>Comments</h2>
+  		<%= render @gossip.comments %>
+  		
+  	</div>
+  	
+  </section>
+  
