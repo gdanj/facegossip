@@ -1,0 +1,6 @@
+<%= form_for @user, url: {action: "create"} do |f| %>
+  <%= f.text_field :name, autofocus: true, placeholder: 'Name' %> <br><br><br>
+  <%= f.text_field :email, autofocus: true, placeholder: 'Example@ex.com' %> <br><br><br>
+  <%= f.text_area :password, placeholder: 'Text'  %>
+  <%= f.submit "Create" %>
+<% end %>

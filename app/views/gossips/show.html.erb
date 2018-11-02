@@ -1,2 +1,5 @@
-<h1>Gossips#show</h1>
-<p>Find me in app/views/gossips/show.html.erb</p>
+  <h1><%= @gossip.title %></h1>
+  <h2><%= @gossip.content %></h2>
+  <h2><%= @gossip.user.name %></h2>
+  <a href="/" class="btn btn-primary">menu principale</a>
+  <a href="<%= gossip_path(@gossip.id)%>/edit" class="btn btn-primary">Modifier</a>
