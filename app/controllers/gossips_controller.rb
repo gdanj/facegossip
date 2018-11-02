@@ -30,4 +30,10 @@ class GossipsController < ApplicationController
   	@gossip.update(post_new)
   	redirect_to "/gossips"
   end
+
+  def destroy
+  	@gossip = Gossip.find(params[:id])
+  	@gossip.destroy
+  	redirect_to "/gossips"
+  end
 end

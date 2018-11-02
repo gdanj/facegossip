@@ -1,14 +1,31 @@
 class RegistrationController < ApplicationController
   def new
-  	
   end
 
-  def create
-  	user = User.new
-    user.name = params["user"][:name]
-    user.email = params["user"][:email]
-    user.password = params["user"][:password]
-	user.save
-	redirect_to "/gossips"
+  def login
+
+  end
+
+
+  def check
+
+    @current_user = User.where(email: params[:email], password: params[:password]).first
+
+    if @current_user
+
+      flash[:info] = "Bienvenue #{@current_user.name} !"
+      @current_user.id = User.last.id + 1
+
+
+      redirect_to "/gossips"
+
+    else
+
+      flash[:info] = "Échec de la connexion"
+
+      redirect_to "/registration/login"
+
+    end
+
   end
 end

@@ -3,3 +3,4 @@
   <h2><%= @gossip.user.name %></h2>
   <a href="/" class="btn btn-primary">menu principale</a>
   <a href="<%= gossip_path(@gossip.id)%>/edit" class="btn btn-primary">Modifier</a>
+  <a href="<%= gossip_path(@gossip.id)%>" class="btn btn-danger" data-confirm="Vous être sur le point de supprimer le gossip." data-method="delete">Supprimer</a>

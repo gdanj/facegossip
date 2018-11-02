@@ -6,4 +6,9 @@ class RegistrationControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "should get login" do
+    get registration_login_url
+    assert_response :success
+  end
+
 end
